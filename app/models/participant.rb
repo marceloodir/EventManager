@@ -1,6 +1,6 @@
 class Participant < ActiveRecord::Base
-  belongs_to :evento, class_name: 'Event'
+  belongs_to :event, class_name: 'Event'
 
   validates_presence_of :nome, :email
-  validates :email, uniqueness: { scope: :evento, message: "já cadastrado para esse evento." }
+  validates :email, uniqueness: { scope: :event, message: "já cadastrado para esse evento." }
 end

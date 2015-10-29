@@ -1,4 +1,4 @@
-<%= form_for(@participant) do |f| %>
+<%= form_for @participant,  url: participants_path do |f| %>
   <% if @participant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@participant.errors.count, "error") %> prohibited this participant from being saved:</h2>
@@ -13,21 +13,20 @@
 
   <div class="field">
     <%= f.label :nome %><br>
-    <%= f.text_field :nome %>
+    <%= f.text_field :nome, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.email_field :email, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :telefone %><br>
-    <%= f.text_field :telefone %>
+    <%= f.text_field :telefone, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :evento_id %><br>
-    <%= f.text_field :evento_id %>
+    <%= f.hidden_field :event_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Participar', class: "btn btn-default" %>
   </div>
 <% end %>

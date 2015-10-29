@@ -4,10 +4,10 @@ one:
   nome: MyString
   email: MyString
   telefone: MyString
-  evento_id: 
+  event_id:
 
 two:
   nome: MyString
   email: MyString
   telefone: MyString
-  evento_id: 
+  event_id: 
