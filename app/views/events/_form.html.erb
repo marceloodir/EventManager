@@ -1,4 +1,4 @@
-<%= form_for(@event) do |f| %>
+<%= form_for @event, url: event_path, html: { multipart: true } do |f| %>
   <% if @event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
@@ -13,25 +13,24 @@
 
   <div class="field">
     <%= f.label :titulo %><br>
-    <%= f.text_field :titulo %>
+    <%= f.text_field :titulo, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :descricao %><br>
-    <%= f.text_area :descricao %>
+    <%= f.text_area :descricao, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :imagem %><br>
-    <%= f.text_field :imagem %>
+    <%= f.file_field :avatar, class: "form-control", accept: 'image/png,image/gif,image/jpeg,image/jpg' %>
   </div>
   <div class="field">
     <%= f.label :data %><br>
-    <%= f.datetime_select :data %>
+    <%= f.datetime_select :data, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :criador_id %><br>
-    <%= f.text_field :criador_id %>
+    <%= f.text_field :criador_id, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Criar Evento', class: "btn btn-default" %>
   </div>
 <% end %>

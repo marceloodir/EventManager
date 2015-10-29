@@ -11,16 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151029110504) do
+ActiveRecord::Schema.define(version: 20151029120625) do
 
   create_table "events", force: :cascade do |t|
     t.string   "titulo"
     t.text     "descricao"
-    t.string   "imagem"
     t.datetime "data"
     t.integer  "criador_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "events", ["criador_id"], name: "index_events_on_criador_id"
