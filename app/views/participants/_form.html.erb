@@ -21,7 +21,7 @@
   </div>
   <div class="form-group">
     <%= f.label :telefone %><br>
-    <%= f.text_field :telefone, class: "form-control" %>
+    <%= f.text_field :telefone, :id => "phone", class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.hidden_field :event_id %>
@@ -30,3 +30,8 @@
     <%= f.submit 'Participar', class: "btn btn-success btn-lg" %>
   </div>
 <% end %>
+<script>
+  $(document).ready(function(){
+    $("#phone").inputmask("(99) 9999[9]-9999",{placeholder:" ", skipOptionalPartCharacter: " " });  //static mask
+  });
+</script>

@@ -45,4 +45,5 @@ group :development do
   gem 'spring'
 
   gem 'paperclip', '~> 4.3'
+  gem 'jquery-inputmask-rails'
 end
