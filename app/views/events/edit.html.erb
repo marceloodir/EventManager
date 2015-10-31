@@ -1,6 +1,15 @@
-<h1>Editing Event</h1>
+<div class="panel panel-primary">
 
-<%= render 'form' %>
+  <div class="panel-heading">
+    <h3>Editar Evento</h3>
+  </div>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+  <div class="panel-body">
+    <%= render 'form' %>
+  </div>
+
+  <div class="panel-footer">
+    <%= link_to 'Voltar', events_path, class: "btn btn-default" %>
+  </div>
+
+</div>

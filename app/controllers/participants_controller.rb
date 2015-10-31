@@ -33,6 +33,7 @@ class ParticipantsController < ApplicationController
 
     respond_to do |format|
       if @participant.save
+        
         format.html { redirect_to events_path, notice: 'Sua Participação foi confirmada com sucesso.' }
         format.json { render :show, status: :created, location: @participant }
       else

@@ -1,7 +1,16 @@
-<h1>Inscrição:</h1>
 
-<h2>Evento: <%=@participant.event.titulo %></h2>
+<div class="panel panel-primary">
 
-<%= render 'form' %>
+  <div class="panel-heading">
+    <h3>Evento: <%=@participant.event.titulo %></h3>
+  </div>
 
-<%= link_to 'Voltar', events_path %>
+  <div class="panel-body">
+    <%= render 'form' %>
+  </div>
+
+  <div class="panel-footer">
+    <%= link_to 'Voltar', events_path, class: "btn btn-default" %>
+  </div>
+
+</div>

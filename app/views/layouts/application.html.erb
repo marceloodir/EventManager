@@ -6,9 +6,15 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container topo">
+    <a class="navbar-brand" href="<%=root_path%>">IFRN</a>
+    <%= link_to 'Novo Evento', new_event_path, class: "btn btn-primary navbar-btn navbar-right" %>
+  </div>
+</nav>
 <body class="container-fluid">
-
-<%= yield %>
-
+  <div class="conteudo">
+    <%= yield %>
+  </div>
 </body>
 </html>
